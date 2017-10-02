@@ -1,0 +1,86 @@
+body, html{
+    height: 100%;
+}
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+nav{
+    margin-top: 2em;
+    width: 100%;
+}
+image{
+    width: 100%;
+    height: 100%;
+}
+
+#about{
+    position: fixed;
+    left: 10em;
+}
+#home{
+    position: fixed;
+    left: 49%;
+}
+#contact{
+    position: fixed;
+    right: 10em;
+}
+#info{
+    top: 40%;
+    width: 100%;
+    color: white;
+    position: fixed;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.bg{
+    background-image: url(../images/pexels-01.jpeg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sliding-bar{
+    padding-bottom: 3px;
+}
+.sliding-bar::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    transition: width 0s ease, background .5s ease;
+}
+.sliding-bar:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: black;
+    transition: width .3s ease;
+}
+.sliding-bar:hover:before{
+    width: 100%;
+    background: black;
+    transition: width .3s ease;
+}
+.sliding-bar:hover:after{
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+.noLinkStyle, .noLinkStyle:visited, .noLinkStyle:hover{
+    text-decoration: none;
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
