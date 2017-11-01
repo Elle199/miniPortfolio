@@ -9,43 +9,24 @@ body{
     overflow: hidden;
 }
 nav{
-    margin-top: 2em;
+    padding-top: 2em;
     width: 100%;
+    height: 4em;
 }
 image{
     width: 100%;
     height: 100%;
 }
-
-#about{
-    position: fixed;
-    left: 10em;
-}
-#home{
-    position: fixed;
-    left: 49%;
-}
-#contact{
-    position: fixed;
-    right: 10em;
-}
-#info{
-    top: 40%;
-    width: 100%;
-    color: white;
-    position: fixed;
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+p{
+    display: inline-block;
 }
 .bg{
-    background-image: url(../images/pexels-01.jpeg);
+    background-image: url(../images/pic-02.jpg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .sliding-bar{
     padding-bottom: 3px;
 }
@@ -83,4 +64,89 @@ image{
     color: black;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
+}
+.slidebar{
+    left: 0;
+    right: 0;
+    margin-top: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    background-color: rgba(255,255,255,1);
+}
+#about{
+    position: fixed;
+    left: 10em;
+}
+#home{
+    position: fixed;
+    left: 49%;
+}
+#contact{
+    position: fixed;
+    right: 10em;
+}
+#info{
+    top: 40%;
+    width: 100%;
+    color: white;
+    position: absolute;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 1;
+}
+#cut-left{
+    display: block;
+    position: absolute;
+    z-index: 0;
+    width: 25em;
+    height: 25em;
+    left: 0;
+    top: 10em;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+#cut-right{
+    /*display: block;*/
+    position: fixed;
+    z-index: 0;
+    width: 10em;
+    height: 25em;
+    right: 0;
+    top: 20em;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+#cut-bottom{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 40%;
+    width: 25em;
+    height: 10em;
+    bottom: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    transition: 0.5s ease;
+}
+#crossbar1{
+    height: 1.67rem;
+    margin-top: 1.1rem;
+    width: 15%;
+}
+#crossbar2{
+    height: 2.5rem;
+    margin-top: 2rem;
+    width: 20%;
+}
+#crossbar3{
+    height: 1.67rem;
+    margin-top: 1.1rem;
+    width: 12%;
+}
+#p-num{
+    font-size: 1.17rem;
+}
+#p-name{
+    font-size: 2rem;
+}
+#p-artist{
+    font-size: 1.17rem;
 }

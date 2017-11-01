@@ -1,0 +1,24 @@
+//out: ../css/anim.css
+.keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}
+
+/* example */
+#coverbar1 {
+
+	.keyframes(cross-over;{
+		0% { width: 0; }
+		100% { width: 20%; }
+		});
+
+	.animation(cross-over 1s linear infinite alternate)
+
+}
